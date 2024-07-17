@@ -9,28 +9,12 @@ import { Butterfly } from "./Butterfly";
 import { Particles } from "./Particles";
 // import { button, useControls } from 'leva'
 import { Perf } from "r3f-perf";
+import { Ghost } from "./Ghost.jsx";
 
 const rand = new Array(15).fill(0).map(() => ({
   position: [MathUtils.randFloat(0.5, 0.7), MathUtils.randFloat(0.5, 0.7), MathUtils.randFloat(0.5, 0.7)],
   scale: MathUtils.randFloat(0.5, 1),
 }));
-
-// function Capture() {
-//   const gl = useThree((state) => state.gl)
-//   useControls({
-//     screenshot: button(() => {
-//       const link = document.createElement('a')
-//       link.setAttribute('download', 'canvas.png')
-//       link.setAttribute(
-//         'href',
-//         gl.domElement.toDataURL('image/png').replace('image/png', 'image/octet-stream')
-//       )
-//       link.click()
-//     })
-//   })
-
-//   return null
-// }
 
 export default function App() {
   return (
@@ -49,7 +33,7 @@ export default function App() {
           {/* {rand.map((e, i) => (
             <Butterfly key={i} {...e} />
           ))} */}
-
+          <Ghost />
           {/* <Clouds /> */}
           <Sky azimuth={0.5} inclination={0.55} distance={100} />
           {/* <ambientLight Intensity={500}/> */}
@@ -60,7 +44,6 @@ export default function App() {
           />
         </Suspense>
         {/* <Particles /> */}
-        {/* <Capture /> */}
 
         {/* <OrbitControls enableZoom={false} makeDefault autoRotate autoRotateSpeed={0.8} /> */}
         <OrbitControls makeDefault />
