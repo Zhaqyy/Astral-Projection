@@ -4,9 +4,9 @@ import { Suspense } from "react";
 import { MathUtils } from "three";
 // import { Grass } from './Grass'
 import Grass from "./Helper/Grass.jsx";
-import { BlobGeometry } from "./BlobGeometry";
-import { Butterfly } from "./Butterfly";
-import { Particles } from "./Particles";
+// import { BlobGeometry } from "./BlobGeometry";
+// import { Butterfly } from "./Butterfly";
+// import { Particles } from "./Particles";
 // import { button, useControls } from 'leva'
 import { Perf } from "r3f-perf";
 import { Ghost } from "./Ghost.jsx";
