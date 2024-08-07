@@ -10,6 +10,7 @@ import Grass from "./Helper/Grass.jsx";
 // import { button, useControls } from 'leva'
 import { Perf } from "r3f-perf";
 import { Ghost } from "./Ghost.jsx";
+import Tree from "./Tree.jsx";
 
 const rand = new Array(15).fill(0).map(() => ({
   position: [MathUtils.randFloat(0.5, 0.7), MathUtils.randFloat(0.5, 0.7), MathUtils.randFloat(0.5, 0.7)],
@@ -17,19 +18,22 @@ const rand = new Array(15).fill(0).map(() => ({
 }));
 
 export default function App() {
+  const degreesToRadians = (degrees) => (degrees * Math.PI) / 180;
   return (
     <>
       <Canvas
         dpr={1.5}
-        camera={{ position: [15, 15, 10] }} //
+        camera={{ position: [0, 3, 50] }} //
         // gl={{ preserveDrawingBuffer: true }}
+        fov={75}
       >
         <Perf position='top-left' />
         <Suspense fallback={null}>
           {/* <Grass>
             <BlobGeometry />
           </Grass> */}
-          <Grass />
+          <Tree/>
+          <Grass rotation={[0,degreesToRadians(153),0]} />
           {/* {rand.map((e, i) => (
             <Butterfly key={i} {...e} />
           ))} */}
@@ -46,7 +50,7 @@ export default function App() {
         {/* <Particles /> */}
 
         {/* <OrbitControls enableZoom={false} makeDefault autoRotate autoRotateSpeed={0.8} /> */}
-        <OrbitControls makeDefault />
+        <OrbitControls />
         {/* <CameraShake maxRoll={0.2} maxPitch={0.2} maxYaw={0.2} /> */}
       </Canvas>
     </>
