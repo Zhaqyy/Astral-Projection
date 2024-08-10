@@ -33,13 +33,13 @@ export default function App() {
             <BlobGeometry />
           </Grass> */}
           <Tree/>
+          <Ghost />
           <Grass rotation={[0,degreesToRadians(153),0]} />
           {/* {rand.map((e, i) => (
             <Butterfly key={i} {...e} />
           ))} */}
-          <Ghost />
           {/* <Clouds /> */}
-          <Sky azimuth={0.5} inclination={0.55} distance={100} />
+          <Sky azimuth={0.5} inclination={0.15} distance={100} />
           {/* <ambientLight Intensity={500}/> */}
           {/* <pointLight position={[10, 10, 10]} /> */}
           <Environment
