@@ -17,8 +17,8 @@ canvas {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: rgb(234, 255, 253);
-  /* background: radial-gradient(circle, #363636 0%, #0e0e0e 75%); */
+  /* background: rgb(234, 255, 253); */
+  background: radial-gradient(circle, #363636 0%, #0e0e0e 75%);
   cursor: grab;
   cursor: -moz-grab;
   cursor: -webkit-grab;

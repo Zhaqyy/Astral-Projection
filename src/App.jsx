@@ -26,6 +26,7 @@ export default function App() {
         camera={{ position: [0, 3, 50] }} //
         // gl={{ preserveDrawingBuffer: true }}
         fov={75}
+        color="#000000"
       >
         <Perf position='top-left' />
         <Suspense fallback={null}>
@@ -39,12 +40,12 @@ export default function App() {
             <Butterfly key={i} {...e} />
           ))} */}
           {/* <Clouds /> */}
-          <Sky azimuth={0.5} inclination={0.15} distance={100} />
+          {/* <Sky azimuth={0.5} inclination={0.15} distance={100} /> */}
           {/* <ambientLight Intensity={500}/> */}
           {/* <pointLight position={[10, 10, 10]} /> */}
           <Environment
-            preset='sunset'
-            // environmentIntensity={1.5}
+            preset='city'
+            environmentIntensity={0.5}
           />
         </Suspense>
         {/* <Particles /> */}
